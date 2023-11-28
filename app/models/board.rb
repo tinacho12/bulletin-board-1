@@ -8,6 +8,8 @@
 #  updated_at :datetime         not null
 #
 class Board < ApplicationRecord
+  validates(:name, presence: true, uniqueness: true)
+
   # Scoped direct association
   # Board#ActivePosts: returns rows from the posts table associated with this board by board_id column, where the expires_on date is before today
   has_many(:active_posts, -> { where("expires_on < ?", Date.today) }, class_name: "Post", foreign_key: :board_id)

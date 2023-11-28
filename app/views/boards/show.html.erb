@@ -76,7 +76,7 @@
     <h2>
       Add a new post
     </h2>
-    <form action="/modify_board/<%= @the_board.id %>"  method="post" >
+    <form action="/insert_post" method="post" >
       <div>
         <label for="title_box">
           Title
@@ -97,6 +97,9 @@
         </label>
 
         <input type="date" id="expiration_box" name="query_expiration">
+      </div>
+      <div>
+        <input type="hidden" id="board_id_field" name="query_board_id" value="<%= @the_board.id %>">
       </div>
       <button>
         Add post

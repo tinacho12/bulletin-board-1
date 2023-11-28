@@ -11,6 +11,9 @@
 #  board_id   :integer
 #
 class Post < ApplicationRecord
+  validates(:title, presence: true)
+  validates(:body, presence: true)
+  validates(:expires_on, presence: true)
   ## Direct associations
 
   # Post#board: returns rows from the boards table associated to this post by the board_id column
