@@ -1,5 +1,7 @@
 <div>
   <div>
+    <h1><%= @the_board.name %></h1>
+    <!--
     <h1>
       Board #<%= @the_board.id %> details
     </h1>
@@ -45,7 +47,6 @@
 
 <hr>
 
-
 <div>
   <div>
     <h2>
@@ -67,5 +68,40 @@
     </form>
   </div>
 </div>
-
+-->
 <hr>
+
+<div>
+  <div>
+    <h2>
+      Add a new post
+    </h2>
+    <form action="/modify_board/<%= @the_board.id %>"  method="post" >
+      <div>
+        <label for="title_box">
+          Title
+        </label>
+
+        <input type="text" id="title_box" name="query_title">
+      </div>
+      <div>
+        <label for="body_box">
+          Body
+        </label>
+
+        <textarea id="body_box" name="query_body"></textarea>
+      </div>
+            <div>
+        <label for="expiration_box">
+          Expires on
+        </label>
+
+        <input type="date" id="expiration_box" name="query_expiration">
+      </div>
+      <button>
+        Add post
+      </button>
+    </form>
+  </div>
+</div>
+
