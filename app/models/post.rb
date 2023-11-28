@@ -11,4 +11,9 @@
 #  board_id   :integer
 #
 class Post < ApplicationRecord
+  ## Direct associations
+
+  # Post#board: returns rows from the boards table associated to this post by the board_id column
+  belongs_to(:posted_to_board, class_name: "Board", foreign_key: "board_id")
+
 end
