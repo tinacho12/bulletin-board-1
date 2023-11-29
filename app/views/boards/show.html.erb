@@ -76,7 +76,7 @@
     <h2>
       Add a new post
     </h2>
-    <form action="/insert_post" method="post" >
+    <form action="/insert_post" method="post">
       <div>
         <label for="title_box">
           Title
@@ -96,7 +96,7 @@
           Expires on
         </label>
 
-        <input type="date" id="expiration_box" name="query_expiration">
+        <input type="date" id="expiration_box" name="query_expires_on">
       </div>
       <div>
         <input type="hidden" id="board_id_field" name="query_board_id" value="<%= @the_board.id %>">
@@ -142,15 +142,15 @@
       </td>
 
       <td>
-        <%= a_post.body %>%
+        <%= a_post.body %>
       </td>
 
       <td>
-        <%= a_post.created_at %>%
+        <%= a_post.created_at %>
       </td>
 
       <td>
-        <%= a_post.expires_on %>%
+        <%= a_post.expires_on %>
       </td>
 
     </tr>
@@ -190,15 +190,15 @@
       </td>
 
       <td>
-        <%= a_post.body %>%
+        <%= a_post.body %>
       </td>
 
       <td>
-        <%= a_post.created_at %>%
+        <%= a_post.created_at %>
       </td>
 
       <td>
-        <%= a_post.expires_on %>%
+        <%= a_post.expires_on %>
       </td>
 
     </tr>
